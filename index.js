@@ -64,6 +64,49 @@
 
 // loginHandler("rahulsingh157", "123455", login);
 
-console.log("one");
-setTimeout(()=>{console.log("Two")},1000)
-console.log("three");
+// console.log("one");
+
+// for(i=0;i<1000;i++){
+//     console.log("i = "+i);
+// }
+// // setTimeout(()=>{console.log("Two")},1000)
+// console.log("three");
+
+const container = document.getElementById("container");
+const button = document.getElementById("btn");
+
+const h1 = document.createElement('h1')
+console.log(h1)
+h1.innerText='ABES Engineering College'
+
+const loader = document.createElement('h2');
+
+
+console.log(container);
+console.log(button);
+
+const img = document.createElement('img');
+
+function ping(){
+    try{
+        // alert("server ping");
+        loader.innerHTML='<h2>Loading...</h2>'
+        container.innerHTML='<h2>Welcome to DOM</h2>'
+        h1.style.backgroundColor='red';
+        container.appendChild(loader);
+        container.appendChild(h1);
+        img.src='image.png';
+        img.setAttribute('height',200);
+        img.setAttribute('width',200);
+        container.appendChild(img);
+
+    }catch(err){
+        console.log(err);
+    }
+    finally{
+        container.removeChild(loader);
+    }
+
+}
+
+button.addEventListener('click', ping);
