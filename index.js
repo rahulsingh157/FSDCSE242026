@@ -106,7 +106,7 @@ function ping(){
     finally{
         container.removeChild(loader);
     }
-
+    
 }
 
 button.addEventListener('click', ping);
