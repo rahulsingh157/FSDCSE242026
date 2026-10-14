@@ -21,7 +21,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div style={{ textAlign: 'center' }}>
       {/* <ICardGallery/> */}
       {/* <MyState/> */}
       {/* <ColorChange/> */}
@@ -31,9 +31,10 @@ function App() {
       {/* <FetchProducts/> */}
       <BrowserRouter>
       <Routes>
-      <Route path='/' element={<Home/>}></Route>
+      <Route path='/' element={<Home/>}>
       <Route path='/login' element={<Login/>}></Route>
       <Route path='/register' element={<Registration/>}></Route>
+      </Route>
       <Route path='/dashboard' element={<Dashboard/>}></Route>
 
       </Routes>
